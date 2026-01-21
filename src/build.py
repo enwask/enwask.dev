@@ -17,12 +17,16 @@ class Data:
     def __init__(self, root: Path) -> None:
         self.root = root
 
+        # Ensure data directory exists
+        self.data = root / 'data'
+        self.data.mkdir(exist_ok=True)
+
     @cached_property
     def works(self) -> list[dict]:
         """
         Load the works data from the data/works directory.
         """
-        works_dir = self.root / 'data' / 'works'
+        works_dir = self.data / 'works'
         works = []
         for work_file in works_dir.glob('*.yaml'):
             # For simplicity, just return the filename as title
