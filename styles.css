@@ -1,0 +1,173 @@
+body {
+  background: black;
+  background: linear-gradient(170deg, black 40%, #0f0d12 100%);
+  background-attachment: fixed;
+  color: white;
+}
+
+.zalando {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-variation-settings: "wght" var(--wght, 400);
+  font-style: normal;
+}
+
+
+.karla,
+body {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  box-sizing: border-box;
+
+  width: 100%;
+  height: 64px;
+  padding: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  #navbar {
+    height: 48px;
+    padding: 12px;
+    justify-content: end;
+  }
+}
+
+.content {
+  position: absolute;
+  top: max(8%, 64px);
+  left: 0;
+
+  width: 100%;
+  height: auto;
+
+  box-sizing: border-box;
+  padding: max(16px, 1.5%);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.panel {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.panel .column {
+  display: flex;
+  flex-direction: column;
+}
+
+#logo {
+  height: 100%;
+  cursor: pointer;
+}d
+
+#header-panel {
+  --margin-width: min(6rem, 10%);
+  margin-top: var(--margin-width);
+  margin-bottom: var(--margin-width);
+
+  justify-content: center;
+}
+
+#header-column {
+  width: auto;
+}
+
+h1#header {
+  color: white;
+  display: inline-block;
+
+  font-size: 5rem;
+  --wght: 900;
+  line-height: 1;
+
+  margin: 0;
+  margin-bottom: -.8rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #header-column {
+    width: 100%;
+  }
+
+  h1#header {
+    font-size: 2.5rem;
+  }
+}
+
+.text {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.works-list {
+  display: flex;
+  flex-direction: column;
+
+  list-style-type: none;
+  padding: 0;
+
+  gap: .6rem;
+}
+
+.works-list>li {
+  margin-bottom: .5rem;
+}
+
+.works-list h2 {
+  font-size: 2rem;
+  line-height: 1;
+  margin-top: 0;
+  margin-bottom: .35rem;
+
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-variation-settings: "wght" var(--wght, 200);
+
+  color: white;
+}
+
+.works-list a {
+  text-decoration: none;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  list-style: none;
+  padding: 0;
+
+  height: 1.2rem;
+  gap: .3rem;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+  box-sizing: border-box;
+
+  font-size: .8rem;
+  border-radius: 1rem;
+  padding: .5rem;
+
+  --tag-color: #7b7182;
+  color: var(--tag-color);
+  border: 1px solid var(--tag-color);
+}
